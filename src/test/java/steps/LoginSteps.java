@@ -1,4 +1,4 @@
-/* package CucumberTool;
+package steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,29 +8,32 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utils.CommonMethods;
+import utils.ConfiqReader;
 
 import java.util.concurrent.TimeUnit;
 
-   public class StepDefClass {
+public class LoginSteps extends CommonMethods {
 
-    WebDriver driver;
+  //  WebDriver driver;
 
     @Given("user is navigated to HRMS application")
     public void user_is_navigated_to_hrms_application() {
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
-        driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+        openBrowserAndLaunchApplication();
+     //   WebDriverManager.chromedriver().setup();
+     //   driver=new ChromeDriver();
+     //   driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
+    //    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    //    driver.manage().window().maximize();
     }
 
     @When("user enters valid username and valid password")
     public void user_enters_valid_username_and_valid_password() {
         WebElement usernameField = driver.findElement(By.id("txtUsername"));
-        usernameField.sendKeys("admin");
+        usernameField.sendKeys(ConfiqReader.getPropertyValue("username"));
 
         WebElement passwordField = driver.findElement(By.id("txtPassword"));
-        passwordField.sendKeys("Hum@nhrm123");
+        passwordField.sendKeys(ConfiqReader.getPropertyValue("password"));
 
     }
 
@@ -50,9 +53,4 @@ import java.util.concurrent.TimeUnit;
         }
     }
 
-    @Then("user verify dashbord page")
-    public void user_verify_dashbord_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-} */
+}

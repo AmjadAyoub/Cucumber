@@ -19,7 +19,8 @@ import org.junit.runner.RunWith;
         // for every scenario implementation we always  have to assign the dryrun to true to get the methods steps
         // and then assign it back to false for executing all the steps
         dryRun = false,
-        tags = "@sprint3 or @sprint1",
+        //tags="@sprint1 or @sprint3"
+        tags = "@outline",
 
         // to remove irrelevant information from console, you need to set monochrome to true
         monochrome = true,

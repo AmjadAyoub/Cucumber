@@ -10,19 +10,19 @@ public class ConfiqReader {
 
     public static Properties readProperties(String filePath){
         try {
-            FileInputStream fis = new FileInputStream(filePath);  // to locate the file
+            FileInputStream fis = new FileInputStream(filePath);
             prop = new Properties();
             prop.load(fis);
-        } catch (FileNotFoundException e) {   // to handle if file is not found
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e) {    // to handle input/output exceptions
-           e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return prop;
-
     }
+
     public static String getPropertyValue(String key){
-        // get property is the method which will read the value as per the key provided
+        //get property is the method which will read the value as per the key provided
         return prop.getProperty(key);
     }
 

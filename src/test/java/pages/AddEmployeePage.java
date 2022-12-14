@@ -31,15 +31,18 @@ public class AddEmployeePage extends CommonMethods {
     @FindBy(id = "re_password")
     public WebElement confirmpasswordField;
 
+    @FindBy(id = "employeeId")
+    public WebElement empIdLocator;
+
     @FindBy(id = "btnSave")
     public WebElement saveButton;
 
     public AddEmployeePage(){
-        //page factory is the concept of selenium which we use to implement page object model design pattern
-        // which is responsible to initialize all the objects of the class.
-        //Here when we say objects, we mean locators what we also call object repository.
-        //if someone asks this to you in the interview, you have to write the same thing
+        //page factory is the concept of selenium which we use to implement page
+        // object model design pattern which is respnsible to initialize all the objects
+        //of the class. here when we say objects, we mean locators what we also call
+        //object repository.
+        //if someone ask this to you in the interview you have to write the same thing
         PageFactory.initElements(driver, this);
     }
-
 }

@@ -30,7 +30,9 @@ import org.junit.runner.RunWith;
         // to generate the reports we need plugin of runner class
 
 
-        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json"}
+        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json",
+    // this failed.txt file holds all the scenarios which are failed during execution
+        "rerun:target/failed.txt"}
 
 )
 

@@ -18,9 +18,9 @@ import org.junit.runner.RunWith;
         // sprint: we can call it any name. no need to be sprint
         // for every scenario implementation we always  have to assign the dryrun to true to get the methods steps
         // and then assign it back to false for executing all the steps
-        dryRun = false,
+        dryRun = true,
         //tags="@sprint1 or @sprint3"
-        tags = "@db",
+        tags = "@api",
 
         // to remove irrelevant information from console, you need to set monochrome to true
         monochrome = true,

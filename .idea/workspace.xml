@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6450bd01-8028-43a5-9a68-83a30765f8a2" name="Changes" comment="Cucumber">
-      <change afterPath="$PROJECT_DIR$/src/test/java/APIPackage/HardCodedExamples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/DatabaseSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/DBUtility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/APISteps/APIWorkFlowSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/APISteps/GenerateTokenSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runners/APIRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/APIConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/APIPayloadConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/APIWorkflow.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CucumberTool/Dashboard.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CucumberTool/Dashboard.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AddEmployeePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AddEmployeePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/SmokeRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/SmokeRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/AddEmployeeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/AddEmployeeSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/confiq/confiq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/confiq/confiq.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/EmployeeSearch.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/EmployeeSearch.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +58,41 @@
       <recent name="C:\Users\Joe\IdeaProjects\CucumberBatch14\CucumberBatch14\src\test\resources\features" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HardCodedExamples">
+  <component name="RunManager" selected="JUnit.APIRunner">
+    <configuration name="Feature: APIWorkflow" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/APIWorkflow.feature" />
+      <option name="GLUE" value="APISteps steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CucumberBatch14" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: APIWorkflow" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APIRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CucumberBatch14" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.APIRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HardCodedExamples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CucumberBatch14" />
       <extension name="coverage">
@@ -74,38 +104,6 @@
       <option name="PACKAGE_NAME" value="APIPackage" />
       <option name="MAIN_CLASS_NAME" value="APIPackage.HardCodedExamples" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HardCodedExamples.acreateEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CucumberBatch14" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="APIPackage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="APIPackage" />
-      <option name="MAIN_CLASS_NAME" value="APIPackage.HardCodedExamples" />
-      <option name="METHOD_NAME" value="acreateEmployee" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HardCodedExamples.bgetOneEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CucumberBatch14" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="APIPackage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="APIPackage" />
-      <option name="MAIN_CLASS_NAME" value="APIPackage.HardCodedExamples" />
-      <option name="METHOD_NAME" value="bgetOneEmployee" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,29 +124,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HardCodedExamples.getOneEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SmokeRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CucumberBatch14" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="APIPackage.*" />
+          <option name="PATTERN" value="runners.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="APIPackage" />
-      <option name="MAIN_CLASS_NAME" value="APIPackage.HardCodedExamples" />
-      <option name="METHOD_NAME" value="getOneEmployee" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="runners" />
+      <option name="MAIN_CLASS_NAME" value="runners.SmokeRunner" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.APIRunner" />
+        <item itemvalue="Cucumber Java.Feature: APIWorkflow" />
+        <item itemvalue="JUnit.SmokeRunner" />
         <item itemvalue="JUnit.HardCodedExamples" />
         <item itemvalue="JUnit.HardCodedExamples.cupdateEmployee" />
-        <item itemvalue="JUnit.HardCodedExamples.acreateEmployee" />
-        <item itemvalue="JUnit.HardCodedExamples.bgetOneEmployee" />
-        <item itemvalue="JUnit.HardCodedExamples.getOneEmployee" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671073539133</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cucumber">
+      <created>1674313215016</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674313215016</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

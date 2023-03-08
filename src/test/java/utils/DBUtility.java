@@ -92,7 +92,7 @@ public class DBUtility {
 
                 // iterates over the columns
                 for (int i = 1; i <= rSetMetaData.getColumnCount(); i++) {
-                    String key = rSetMetaData.getColumnName(i);// rsetmetadada will return the column keys (header) only
+                    String key = rSetMetaData.getColumnName(i);// rsetmetadata will return the column keys (header) only
                     String value = rset.getString(key); // rset will return all the values in string (rows)
                     //we store data from every column into a map
                     mapData.put(key, value);

@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6450bd01-8028-43a5-9a68-83a30765f8a2" name="Changes" comment="Cucumber">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/APISteps/APIWorkFlowSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/APISteps/APIWorkFlowSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/SmokeRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/SmokeRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/AddEmployeeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/AddEmployeeSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/APIPayloadConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/APIPayloadConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/DatabaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/DatabaseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/CommonMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/CommonMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utils/DBUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/DBUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/APIWorkflow.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/APIWorkflow.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/AddEmployee.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
       <recent name="C:\Users\Joe\IdeaProjects\CucumberBatch14\CucumberBatch14\src\test\resources\features" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FailedRunner">
+  <component name="RunManager" selected="JUnit.SmokeRunner">
     <configuration name="Feature: APIWorkflow" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/APIWorkflow.feature" />
@@ -144,9 +144,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SmokeRunner" />
         <item itemvalue="JUnit.FailedRunner" />
         <item itemvalue="JUnit.APIRunner" />
-        <item itemvalue="JUnit.SmokeRunner" />
         <item itemvalue="Cucumber Java.Scenario: API test case for creating the employee using json body" />
         <item itemvalue="Cucumber Java.Feature: APIWorkflow" />
       </list>
@@ -231,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674405034697</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Cucumber">
+      <created>1678239099514</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678239099514</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">

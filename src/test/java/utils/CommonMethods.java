@@ -6,6 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -27,8 +28,10 @@ public class CommonMethods extends PageInitializer {
         ConfiqReader.readProperties(Constants.CONFIGURATION_FILEPATH);
         switch (ConfiqReader.getPropertyValue("browser")){
             case "chrome":
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.setHeadless(true); // using headless if we do not want to see the UI (backend) (if we set it false: we will see the browser)
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();

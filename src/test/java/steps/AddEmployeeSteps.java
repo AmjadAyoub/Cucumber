@@ -160,7 +160,7 @@ public class AddEmployeeSteps extends CommonMethods {
             Thread.sleep(2000);
         }
     }
-   // below is added by Asel
+   // below is added by Asel for SQL automation
     @When("user captures employee id")
     public void user_captures_employee_id() {
         id=addEmployee.empIdLocator.getAttribute("value");

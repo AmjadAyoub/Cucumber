@@ -126,4 +126,58 @@ public class APIWorkFlowSteps {
 
     }
 
+
+    // ********************************************** HOMEWORK ********************
+    @Given("a request is prepared for updating an employee with dynamic data {string} , {string} , {string}  , {string} , {string} , {string} , {string} , {string}")
+    public void a_request_is_prepared_for_updating_an_employee_with_dynamic_data(String empID, String firstname, String lastname, String middlename, String gender, String dob, String empStatus, String jobTitle) {
+        request = given().
+                header(APIConstants.Header_Key_Content_Type, APIConstants.Header_Value_Content_Type).
+                header(APIConstants.Header_Key_Authorization, GenerateTokenSteps.token).
+                body(APIPayloadConstant.updateEmployeePayloadDynamic
+                        (empID ,firstname, lastname, middlename, gender,
+                                dob, empStatus, jobTitle));
+    }
+
+
+
+    @When("a PUT call is made to update the employee")
+    public void a_put_call_is_made_to_update_the_employee() {
+        response = request.when().put(APIConstants.UPDATE_EMPLOYEE_URI);
+        response.prettyPrint();
+        System.out.println(employee_id);
+    }
+    @Then("the status code for updating the employee is {int}")
+    public void the_status_code_for_updating_the_employee_is(Integer int1) {
+        response.then().assertThat().statusCode(int1);
+        System.out.println(employee_id);
+    }
+
+    @Given("a request is prepared for getting the updated employee")
+    public void a_request_is_prepared_for_getting_the_updated_employee() {
+        request = given().
+                header(APIConstants.Header_Key_Content_Type,APIConstants.Header_Value_Content_Type).
+                header(APIConstants.Header_Key_Authorization, GenerateTokenSteps.token).
+                queryParam("employee_id",employee_id);
+        System.out.println(employee_id);
+
+    }
+
+    @Then("the retrieved data at {string} object should match with the data used for updating the employee")
+    public void the_retrieved_data_at_object_should_match_with_the_data_used_for_updating_the_employee(String employeeObject, DataTable dataTable) {
+        List<Map<String, String>> expectedData = dataTable.asMaps();
+        //to get all the keys and values of employee object, we use jsonPath.get method
+        Map<String, String> actualData = response.body().jsonPath().get(employeeObject);
+
+        for (Map<String, String> map : expectedData) {
+            //it returns all the keys
+            Set<String> keys = map.keySet();
+            for (String key : keys) {
+                String expectedValue = map.get(key);
+                String actualValue = actualData.get(key);
+                Assert.assertEquals(expectedValue, actualValue);
+            }
+        }
+    }
+
+
 }

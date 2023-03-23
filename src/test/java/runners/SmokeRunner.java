@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
         // and then assign it back to false for executing all the steps
         dryRun = false,
         //tags="@sprint1 or @sprint3"
-        tags = "@database",
+        tags = "@sprint3",
 
         // to remove irrelevant information from console, you need to set monochrome to true
         monochrome = true,

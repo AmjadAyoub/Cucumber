@@ -39,6 +39,7 @@ public class CommonMethods extends PageInitializer {
                 break;
             default:
                 throw new RuntimeException("Invalid browser name");
+
         }
         driver.manage().window().maximize();
         driver.get(ConfiqReader.getPropertyValue("url"));

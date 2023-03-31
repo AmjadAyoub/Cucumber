@@ -29,6 +29,8 @@ public class CommonMethods extends PageInitializer {
         switch (ConfiqReader.getPropertyValue("browser")){
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--no-sandbox");
+                chromeOptions.addArguments("--disable-dev-shm-usage");
                 chromeOptions.setHeadless(true); // using headless if we do not want to see the UI (backend) (if we set it false: we will see the browser)
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver(chromeOptions);
